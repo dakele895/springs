@@ -7,6 +7,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -19,6 +20,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 public class SpringSimpleMultiBean implements BeanFactoryAware,BeanNameAware,BeanFactoryPostProcessor,BeanPostProcessor,InitializingBean{
 
 	private Integer id;
+
 
 	private String name;
 

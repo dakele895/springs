@@ -19,7 +19,7 @@ public class SpringSimpleMultiBeanTest {
 		bean.say();
 
 		SpringOtherBean springOtherBean = applicationContext.getBean("springOtherBean",SpringOtherBean.class);
-		 springOtherBean.say();
+		springOtherBean.say();
 	}
 
 }

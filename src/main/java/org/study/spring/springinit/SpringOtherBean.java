@@ -1,5 +1,7 @@
 package org.study.spring.springinit;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * SpringOtherBean
  *
