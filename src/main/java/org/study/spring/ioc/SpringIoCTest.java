@@ -13,8 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringIoCTest {
 	@Test
 	public void test1(){
-
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:bean.xml");
 		SayService sayService = (SayService)applicationContext.getBean("test");
 		sayService.say();
 	}
