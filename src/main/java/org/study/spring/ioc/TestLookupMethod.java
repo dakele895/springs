@@ -4,6 +4,7 @@ import org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.study.spring.ioc.lookup.method.CommandManager;
+import org.study.spring.ioc.lookup.method.FruitPlate;
 
 /**
  * @description: 测试lookup-method 标签
@@ -22,7 +23,11 @@ public class TestLookupMethod {
 		CommandManager manager = context.getBean("manager",CommandManager.class);
 		//System.out.println(manager.getClass().getName());
 		manager.process();
+		FruitPlate fp1= (FruitPlate)context.getBean("fruitPlate1");
+		FruitPlate fp2 = (FruitPlate)context.getBean("fruitPlate2");
 
+		fp1.getFruit();
+		fp2.getFruit();
 	}
 
 }

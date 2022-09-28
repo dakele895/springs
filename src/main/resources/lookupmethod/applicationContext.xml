@@ -6,6 +6,18 @@
 	<bean id="manager" class="org.study.spring.ioc.lookup.method.CommandManager">
 		<lookup-method bean="command" name="createCommand"/>
 	</bean>
-	<bean id="command" class="org.study.spring.ioc.lookup.method.MyCommand"></bean>
 
+	<bean id="command" class="org.study.spring.ioc.lookup.method.MyCommand"/>
+
+	<bean id="apple" class="org.study.spring.ioc.lookup.method.Apple" scope="prototype"/>
+
+	<bean id="bananer" class="org.study.spring.ioc.lookup.method.Bananer" scope="prototype"/>
+
+	<bean id="fruitPlate1" class="org.study.spring.ioc.lookup.method.FruitPlate">
+		<lookup-method name="getFruit" bean="apple"/>
+	</bean>
+
+	<bean id="fruitPlate2" class="org.study.spring.ioc.lookup.method.FruitPlate">
+		<lookup-method name="getFruit" bean="bananer"/>
+	</bean>
 </beans>
